@@ -1,0 +1,205 @@
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+.team-modal__backdrop.is-hidden {
+  display: none;
+}
+
+.modal {
+  padding: 15px 40px;
+  position: relative;
+  
+
+  background-color: $secondary-background-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  //   transition: transform $trans-duration $timing-func;
+  @media (max-width: 785px) {
+    overflow-y: scroll;
+  }
+  @media (min-width: 786px) {
+    width: 620px;
+    min-height: 560px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 880px;
+    height: 570px;
+  }
+}
+
+// .backdrop.show-modal .modal {
+//   transform: translate(-50%, -50%) scale(0.5);
+// }
+.close-modal__btn {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: $primary-text-color;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+.icon-close {
+  fill: currentColor;
+}
+
+.team-modal__title-box {
+  display: block;
+  height: 65px;
+  margin: 0;
+  background-color: $primary-text-color;
+  color: $secondary-text-color;
+  padding-top: 12px;
+
+  @media (min-width: 412px) {
+    height: 50px;
+  }
+}
+
+.team-modal__title {
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.team-modal__title a {
+  color: $accent-text-color;
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  text-align: center;
+  @media (min-width: 768px) {
+    height: 470px;
+
+    padding: 10px 15px;
+    margin: 0 -15px;
+  }
+  @media (min-width: 1024px) {
+    height: 480px;
+  }
+}
+.team__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: calc((100% - 2 * 15px) / 2);
+
+  @media (min-width: 768px) {
+    width: calc((100% - 6 * 15px) / 4);
+  }
+}
+
+.team__task-list {
+  display: none;
+
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border-radius: 10%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  z-index: 1000;
+
+  background-color: rgba(0, 0, 0, 0.603);
+  color: $secondary-text-color;
+
+  transform: scale(0.7);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+.team__item.show-tasks .team__task-list {
+  display: flex;
+  transform: scale(1);
+}
+
+.team__picture {
+  width: 100%;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+  cursor: pointer;
+  @media (min-width: 768px) {
+    height: 112px;
+  }
+  @media (min-width: 1024px) {
+    height: 178px;
+  }
+
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    border-radius: 30%;
+  }
+}
+.team__wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.team__name,
+.team__profession {
+  text-decoration: none;
+  color: $footer-text-color;
+}
+
+.team__link {
+  position: absolute;
+
+  bottom: 50px;
+  right: 0;
+}
+
+.icon-github {
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.3);
+  }
+}

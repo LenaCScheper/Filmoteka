@@ -1,0 +1,44 @@
+//  Опеределяем шрифт
+//  Основной шрифт: Roboto;
+//  Резеревный шрифт: sans-serif;
+
+//  Определяем свойства шрифта
+//  Основной размер шрифта: 12px;
+//  Основной вес шрифта: 500;
+//  Основная высота строки: 16px;
+//  Основное расстояние между буквами: 0 em;
+
+//  Опеределяем палитру цветов шрифта
+//  Основной цвет шрифта: #000000;
+//  Вторичный цвет шрифта: #FFFFFF;
+//  Акцент шрифта: #FF6B08;
+
+//  Опеределяем палитру цветов фона
+//  Основной цвет фона: #FFFFFF;
+//  Вторичный цвет фона: #F7F7F7;
+
+// Добавляем переменные шрифта
+$primary-text: 'Roboto';
+$reserved-text: 'sans-serif';
+
+// Добавляем переменные свойств шрифта
+$primary-font-size: 12px;
+$primary-font-weight: 500;
+$primary-line-height: 16px;
+$primary-letter-spacing: 0em;
+
+// Добавляем переменные цветов шрифта
+$primary-text-color: #000000;
+$secondary-text-color: #ffffff;
+$light-grey-color-text: #8c8c8c;
+$footer-text-color: #545454;
+$accent-text-color: #ff6b08;
+
+// Добавляем переменные цветов фона
+$primary-background-color: #ffffff;
+$secondary-background-color: #f7f7f7;
+$accent-background-color: #ff6b08;
+
+// timing-function
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$duration: 300ms;

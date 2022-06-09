@@ -1,0 +1,17 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+// @import './example';
+@import './utils/variables';
+@import './utils/general';
+@import 'header';
+@import 'movies-gallery';
+@import 'pagination';
+@import 'footer';
+@import 'team-modal';
+@import 'loader';
+@import 'auth-modal';
+@import 'modal-oneMoovie';
