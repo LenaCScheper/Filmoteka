@@ -1,5 +1,4 @@
 
-
 const localStorageApi = {
 
     // Читає файл `key` з бібліотеки
@@ -20,16 +19,10 @@ const localStorageApi = {
 
     // З файлу `key` видаляє `value`.
     removeMovie(key, value) {
-  
         const dataFromLocalStorage = this.load(key);
-        dataFromLocalStorage.forEach((element, i) => {
-            if (element.id === value) dataFromLocalStorage.splice(i, 1)
-        });
-        
-
-            this.save(key, dataFromLocalStorage);
+        const truncatedArray = dataFromLocalStorage.filter((el) => el.id !== value);
+        this.save(key, truncatedArray);
      },
-
 
     load(key){
         try {

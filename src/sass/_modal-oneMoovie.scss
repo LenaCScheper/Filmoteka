@@ -40,7 +40,6 @@
 .modal-img-container {
   width: 240px;
   height: 356px;
-  background-image: url(../images/no-poster_1x.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -57,7 +56,6 @@
   @media screen and (min-width: 1024px) {
     width: 395px;
     height: 477px;
-    background-image: url(../images/no-poster_2x.jpg);
   }
 }
 
@@ -143,12 +141,6 @@
   &.value__title {
     text-transform: uppercase;
   }
-
-  & .value__genres {
-    &:not(:last-child)::after {
-      content: ',';
-    }
-  }
 }
 
 .movie-overview-title {
@@ -201,16 +193,6 @@
     }
   }
 
-  &.add-to-library--active {
-    color: $primary-background-color;
-    background-color: $accent-background-color;
-    border: transparent;
-  }
-  &.active {
-    color: $primary-background-color;
-    background-color: $accent-background-color;
-    border: transparent;
-  }
   @media screen and (min-width: 768px) {
     padding-right: 13px;
     padding-left: 13px;

@@ -42,9 +42,15 @@
 
 .movies-list__link {
   display: block;
+  transition: 250ms ease-in-out;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .movies-list__image {
+  min-height: 396px;
   margin-bottom: 10px;
   border-radius: 5px;
   aspect-ratio: 1/1.5;
@@ -64,8 +70,7 @@
   &:not(:last-child) {
     margin-right: 5px;
   }
-  &:after {
-  }
+ 
 }
 
 .votes {

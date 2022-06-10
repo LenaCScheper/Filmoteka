@@ -6,6 +6,8 @@
       alt='{{title}}'
       data-id="{{id}}"
     />
+    {{else}}
+    <img class="modal-img" src="https://raw.githubusercontent.com/dariaddz/DigitalUnicorns-Filmoteka/main/src/images/no-poster-big-1x.jpg" alt="{{title}}" data-id="{{id}}">
   {{/if}}
 </div>
 
@@ -56,11 +58,7 @@
       </td>
 
       <td class='movie-table-data value'>
-        {{#each genres}}
-          <span class='value__genres'>
-            {{this.name}}
-          </span>
-        {{/each}}
+        {{#each genres}}{{this.name}}{{#unless @last}}, {{/unless}}{{/each}}
       </td>
     </tr>
   </table>
@@ -78,7 +76,7 @@
       data-action='watched'
       data-id="{{id}}"
     >
-      Watched
+    ADD TO WATCHED
     </button>
     <button
       type='button'
@@ -86,7 +84,7 @@
       data-action='queued'
       data-id="{{id}}"
     >
-      Queue
+    ADD TO QUEUE
     </button>
   </div>
 
